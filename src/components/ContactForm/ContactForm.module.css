@@ -1,7 +1,40 @@
-/* .form {
-  outline: 2px solid palegreen;
-  display: block;
+.formContact {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 100px 20px 10px;
+  border: 1px solid grey;
+  border-radius: 2px;
 }
-.App {
-  outline: 2px solid palevioletred;
-} */
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.formInput {
+  margin-top: 10px;
+  padding: 5px;
+  height: 35px;
+  font-size: 20px;
+}
+
+.button {
+  width: 180px;
+  border: none;
+  margin-top: 30px;
+  padding: 10px 15px;
+  background-color: rgb(106, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
+  transition: box-shadow 250ms linear;
+}

@@ -1,7 +1,9 @@
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
 import { Component } from "react";
+import s from './view.module.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const styles = {
   form: {
@@ -36,19 +38,21 @@ class LoginView extends Component{
     const { email, password } = this.state;
 
     return (
-      <div>
-        <h1>Страница логина</h1>
+      <div className={s.form_view}>
+        <h1 className={s.title} >Страница логина</h1>
 
         <form
           onSubmit={this.handleSubmit}
           style={styles.form}
           autoComplete="off"
+          className={s.form_view}
         >
           <label style={styles.label}>
-            Почта
+            E-mail
             <input
               type="email"
               name="email"
+              required
               value={email}
               onChange={this.handleChange}
             />
@@ -59,12 +63,13 @@ class LoginView extends Component{
             <input
               type="password"
               name="password"
+              required
               value={password}
               onChange={this.handleChange}
             />
           </label>
 
-          <button type="submit">Войти</button>
+          <button type="submit" className={s.button} >Войти</button>
         </form>
       </div>
     );
@@ -77,4 +82,3 @@ const mapDispatchToProps = {
 
 export default connect(null, mapDispatchToProps)(LoginView);
 
-// export default LoginView

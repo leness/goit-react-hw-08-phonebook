@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
-import style from './ContactList.module.css';
-// import { connect } from 'react-redux';
-// import contactsOperations from '../../redux/contacts/contacts-operations'
-
+import s from './ContactList.module.css';
+import { Button } from 'react-bootstrap';
+ 
 const ContactList = ({ contacts, onDeleteContact }) => (
   <ul>
         {contacts.map(({id, name, number}) => (
             
-                  <li key={id} className={style.list}>
+                  <li key={id} className={s.list}>
             <p>{name}: {number}</p>
-            <button className={style.button} onClick={()=>onDeleteContact(id)}>Delete</button>
+            {/* <button className={s.button} onClick={() => onDeleteContact(id)}>Delete</button> */}
+            <Button className={s.button} onClick={() => onDeleteContact(id)} variant="danger">Delete</Button>
            </li>  
-        ) 
+        )  
           )}
   </ul>
 )
@@ -28,23 +28,3 @@ ContactList.propTypes = {
 };
 
 export default ContactList
-// const getVisibleContacs = (allContacts, filter) => {
-
-//     const normalizeSearch = filter.toLowerCase();
-
-//     return allContacts.filter(({name}) =>
-//       name.toLowerCase().includes(normalizeSearch),
-//     );
-//   };
-
-
-// const mapStateToProps = ({contact: {contacts, filter}}) => ({
-//   contacts: getVisibleContacs(contacts, filter),
-// })
-  
-
-// const mapDispatchToProps = dispatch => ({
-//   onDeleteContact: (id) => dispatch(contactsOperations.deleteContact(id)),
-// })
-
-// export default connect(mapStateToProps, mapDispatchToProps)(ContactList)

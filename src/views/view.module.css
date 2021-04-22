@@ -1,20 +1,27 @@
-.list {
+.home_view {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: rgb(150, 0, 168);
+  text-align: center;
+}
+
+.form_view {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  font-size: 25px;
-  border: 1px solid rgba(255, 47, 238, 0.5);
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  text-align: center;
 }
 
 .button {
-  width: 140px;
   border: none;
   padding: 10px 15px;
-  background-color: rgb(255, 106, 106);
+  background-color: rgb(red, green, blue);
   color: rgb(0, 0, 0);
   font-weight: 500;
-  font-size: 15px;
   margin-left: 5px;
   margin-right: 5px;
   font-family: inherit;

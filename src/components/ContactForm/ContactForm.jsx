@@ -1,9 +1,10 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import shortid from 'shortid';
-import styles from './ContactForm.module.css'
 import contactsOperations from '../../redux/contacts/contacts-operations';
 import contactSelectors from '../../redux/contacts/contacts-selectors'
+import s from './ContactForm.module.css'
+import { Button } from 'react-bootstrap';
 
 
 class ContactForm extends Component {
@@ -43,28 +44,32 @@ class ContactForm extends Component {
     render() {
         return (
             <>
-            <form className={styles.form} onSubmit={this.handleSubmit}>
-                    <label htmlFor={ this.nameInputId}>name
+            <form className={s.formContact} onSubmit={this.handleSubmit}>
+                    <label htmlFor={ this.nameInputId} className={s.formLabel} >Name
            <input
                             type='text'
                             name='name'
                             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
                             required
+                            className={s.formInput}
                             id={this.nameInputId}
                             value={this.state.name}
                             onChange={this.handleChange} />
           </label>
-          <label htmlFor={ this.numberInputId}>number
+          <label htmlFor={ this.numberInputId} className={s.formLabel} >Number
            <input
                             type='number'
                             name='number'
                             required
+                            className={s.formInput}
                             id={this.numberInputId}
                             value={this.state.number}
                             onChange={this.handleChange} />
           </label>
-          <button type='submit'>Add contact</button>
+                    {/* <button type='submit' className={s.button}>Add contact</button> */}
+                    <Button type='submit' variant="secondary" className={s.button}>Add contact</Button>
+                    
         </form>
             </>
         )

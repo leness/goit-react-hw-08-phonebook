@@ -1,6 +1,9 @@
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import {authSelectors} from '../redux/auth'
+import { authSelectors } from '../redux/auth'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Container } from 'react-bootstrap';
+  // import { format } from 'prettier';
 
 const styles = {
   link: {
@@ -16,8 +19,8 @@ const styles = {
 };
 
 const Navigation = ({ isAuthenticated }) => (
-  <nav>
-    <NavLink
+ <nav>
+      <NavLink
       to="/"
       exact
       style={styles.link}
@@ -36,6 +39,7 @@ const Navigation = ({ isAuthenticated }) => (
       Контакты
       </NavLink>
     )}
+   
 
   </nav>
 )

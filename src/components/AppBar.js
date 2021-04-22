@@ -2,7 +2,8 @@ import { connect } from 'react-redux'
 import AuthNav from './AuthNav'
 import UserMenu from './UserMenu/UserMenu'
 import Navigation from './Navigation'
-import {authSelectors} from '../redux/auth'
+import { authSelectors } from '../redux/auth'
+// import { Navbar, Container } from 'react-bootstrap';
 
 
 const styles = {
@@ -14,12 +15,14 @@ const styles = {
     }
 }
 
-const AppBar = ({isAuthenticated}) => (
+const AppBar = ({ isAuthenticated }) => (
     <header style={styles.header} >
+        {/* <Navbar bg="light" variant="light"> */}
         <Navigation />
-        {/* <AuthNav /> */}
+        
         {isAuthenticated ? <UserMenu/> : <AuthNav />}
-    </header>
+        {/* </Navbar> */}
+        </header>
 )
 
 const mapStateToProps = (state) => ({
