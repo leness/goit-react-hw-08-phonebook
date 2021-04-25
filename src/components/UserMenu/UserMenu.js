@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import { authSelectors, authOperations } from '../../redux/auth';
 import defaultAvatar from './default-avatar.png'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 
 const styles = {

@@ -80,7 +80,7 @@ class RegisterView extends Component {
             />
           </label>
 
-          <button type="submit" className={s.button}>Зареєструватися</button>
+          <button type="submit" className={s.button}>Зарегистрироваться</button>
           
         </form>
       </div>
