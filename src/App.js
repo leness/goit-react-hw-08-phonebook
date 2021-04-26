@@ -39,13 +39,13 @@ const ContactsView = lazy(() => import('./views/ContactsView/ContactsView'));
            <PublicRoute
              path="/login"
              restricted
-             redirectTo="/contacts"
+             redirectTo="/login"
              component={LoginView}
            />
            <PrivateRoute
              path="/contacts"
              component={ContactsView}
-             redirectTo="/login"
+             redirectTo="/contacts"
            />
          </Switch>
          </Suspense>

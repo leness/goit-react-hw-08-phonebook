@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import { Component } from "react";
-import s from './view.module.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import s from './view.module.css';
 
 
 const styles = {
@@ -69,7 +68,7 @@ class LoginView extends Component{
             />
           </label>
 
-          <button type="submit" className={s.button} >Войти</button>
+          <button type="submit" className={s.button}>Войти</button>
         </form>
       </div>
     );
