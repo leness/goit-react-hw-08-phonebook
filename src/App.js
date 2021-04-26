@@ -39,7 +39,8 @@ const ContactsView = lazy(() => import('./views/ContactsView/ContactsView'));
            <PublicRoute
              path="/login"
              restricted
-             redirectTo="/login"
+            //  redirectTo="/login"
+               redirectTo="/contacts"
              component={LoginView}
            />
            <PrivateRoute
