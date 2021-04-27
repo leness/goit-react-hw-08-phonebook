@@ -20,9 +20,9 @@ const styles = {
 const UserMenu = ({avatar, name, onLogout }) => (
     <div style={styles.container}>
         <img src={avatar} alt="" width="32" style={styles.avatar}/>
-        <span style={styles.name}>Добро пожаловать, {name}</span>
+        <span style={styles.name}>Ласкаво просимо, {name}</span>
     {/* <button type="button" onClick={onLogout}>Выйти</button> */}
-    <Button type="button" onClick={onLogout} variant="outline-primary">Выйти</Button>
+    <Button type="button" onClick={onLogout} variant="outline-primary">Вийти</Button>
     </div>
 )
 

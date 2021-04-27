@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   /* box-sizing: border-box; */
-  background-image: url(../../image/pink-watercolor-leaves-background_23-2148907681.jpg);
+  /* background-image: url(../../image/pink-watercolor-leaves-background_23-2148907681.jpg); */
 }
 
 .formContact {
@@ -27,21 +27,4 @@
   padding: 5px;
   height: 35px;
   font-size: 20px;
-}
-
-.button {
-  width: 180px;
-  border: none;
-  margin-top: 30px;
-  padding: 10px 15px;
-  background-color: rgb(106, 255, 255);
-  color: rgb(0, 0, 0);
-  font-weight: 500;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-family: inherit;
-  cursor: pointer;
-  outline: none;
-  box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
-  transition: box-shadow 250ms linear;
 }

@@ -8,8 +8,7 @@ const ContactList = ({ contacts, onDeleteContact }) => (
             
                   <li key={id} className={s.list}>
             <p>{name}: {number}</p>
-            {/* <button className={s.button} onClick={() => onDeleteContact(id)}>Delete</button> */}
-            <Button className={s.button} onClick={() => onDeleteContact(id)} variant="danger">Delete</Button>
+            <Button variant="danger" onClick={() => onDeleteContact(id)} variant="danger">Delete</Button>
            </li>  
         )  
           )}

@@ -27,7 +27,7 @@ const ContactsView = lazy(() => import('./views/ContactsView'));
        <Container>
          <AppBar />
  
-         <Suspense fallback={<p>Загружаем...</p>}>
+         <Suspense fallback={<p>Загружаєм...</p>}>
            <Switch>
            <PublicRoute exact path="/" component={HomeView} />
            <PublicRoute
@@ -46,13 +46,11 @@ const ContactsView = lazy(() => import('./views/ContactsView'));
              path="/contacts"
              component={ContactsView}
              redirectTo="/contacts"
-                // redirectTo="/login"
-               
+                // redirectTo="/login"   
            />
          </Switch>
          </Suspense>
 
-         
        </Container>
      )
    }

@@ -33,7 +33,7 @@ class ContactsView extends Component {
     <Filter />
         <ContactList />
         
-        {this.props.isLoadingContacts && <h1>Загружаем...</h1>}
+        {this.props.isLoadingContacts && <h1>Загружаєм...</h1>}
 
   </div>
     )
