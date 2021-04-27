@@ -1,12 +1,15 @@
 import { connect } from 'react-redux';
 import { authOperations } from '../redux/auth';
 import { Component } from "react";
-import s from './view.module.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const styles = {
   form: {
-    width: 320,
+    width: 230,
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   label: {
     display: 'flex',
@@ -37,14 +40,13 @@ class LoginView extends Component{
     const { email, password } = this.state;
 
     return (
-      <div className={s.form_view}>
-        <h1 className={s.title} >Страница логина</h1>
+      <div>
+        <h1 className="text-center">Введіть логін та пароль</h1>
 
         <form
           onSubmit={this.handleSubmit}
           style={styles.form}
           autoComplete="off"
-          className={s.form_view}
         >
           <label style={styles.label}>
             E-mail
@@ -68,7 +70,7 @@ class LoginView extends Component{
             />
           </label>
 
-          <button type="submit" className={s.button}>Войти</button>
+          <button type="submit" class="btn btn-light">Увійти</button>
         </form>
       </div>
     );

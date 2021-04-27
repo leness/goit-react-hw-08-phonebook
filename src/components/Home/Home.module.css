@@ -1,0 +1,10 @@
+.home {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: rgb(150, 0, 168);
+  text-align: center;
+}
+
+.image {
+  background-image: url(../../image/pink-watercolor-leaves-background_23-2148907681.jpg);
+}

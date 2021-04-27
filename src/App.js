@@ -12,7 +12,7 @@ import PublicRoute from './components/PublicRoute'
 const HomeView = lazy(() => import('./views/HomeView'));
 const RegisterView = lazy(() => import('./views/RegisterView'));
 const LoginView = lazy(() => import('./views/LoginView'));
-const ContactsView = lazy(() => import('./views/ContactsView/ContactsView'));
+const ContactsView = lazy(() => import('./views/ContactsView'));
 
 
  class App extends Component {
@@ -39,14 +39,15 @@ const ContactsView = lazy(() => import('./views/ContactsView/ContactsView'));
            <PublicRoute
              path="/login"
              restricted
-            //  redirectTo="/login"
-               redirectTo="/contacts"
+             redirectTo="/contacts"
              component={LoginView}
            />
            <PrivateRoute
              path="/contacts"
              component={ContactsView}
              redirectTo="/contacts"
+                // redirectTo="/login"
+               
            />
          </Switch>
          </Suspense>

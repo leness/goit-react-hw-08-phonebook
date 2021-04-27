@@ -1,6 +1,13 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  background-image: url(../../image/pink-watercolor-leaves-background_23-2148907681.jpg);
+}
+
 .formContact {
-  display: flex;
-  flex-direction: column;
   padding: 10px 100px 20px 10px;
   border: 1px solid grey;
   border-radius: 2px;

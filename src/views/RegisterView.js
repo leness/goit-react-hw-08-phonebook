@@ -1,12 +1,16 @@
 import { authOperations } from '../redux/auth';
 import { Component } from "react";
 import { connect } from "react-redux";
-import s from './view.module.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import Button from 'react-bootstrap'
 
 const styles = {
   form: {
     width: 320,
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   label: {
     display: 'flex',
@@ -39,16 +43,15 @@ class RegisterView extends Component {
 
     return (
       <div>
-        <h1 className={s.title}>Страница регистрации</h1>
+        <h1 className="text-center">Сторінка реєстрації</h1>
 
         <form
           onSubmit={this.handleSubmit}
           style={styles.form}
           autoComplete="off"
-           className={s.form_view}
         >
           <label style={styles.label}>
-            Имя
+            Ім`я
             <input
               type="text"
               name="name"
@@ -80,7 +83,7 @@ class RegisterView extends Component {
             />
           </label>
 
-          <button type="submit" className={s.button}>Зарегистрироваться</button>
+          <button type="submit" class="btn btn-light">Зареєструватися</button>
           
         </form>
       </div>

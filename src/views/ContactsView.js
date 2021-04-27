@@ -1,11 +1,21 @@
 import { Component } from "react";
 import { connect } from 'react-redux';
-import ContactForm from '../../components/ContactForm';
-import Filter from '../../components/Filter';
-import ContactList from '../../components/ContactList';
-import contactsOperations from '../../redux/contacts/contacts-operations'
-import contactsSelectors from '../../redux/contacts/contacts-selectors'
-import s from './ContactsView.module.css'
+import ContactForm from '../components/ContactForm';
+import Filter from '../components/Filter';
+import ContactList from '../components/ContactList';
+import contactsOperations from '../redux/contacts/contacts-operations'
+import contactsSelectors from '../redux/contacts/contacts-selectors'
+
+
+
+const styles = {
+  app: {
+    width: 500,
+    margin: 'auto',
+    textAlign: 'left',
+    // backgroundColor: 'inherit',
+  }
+}
 
 class ContactsView extends Component {
     componentDidMount() {
@@ -14,12 +24,12 @@ class ContactsView extends Component {
 
   render() {
     return (
-      <div className={s.App} >
+      <div style={styles.app}>
        
-    <h1 className={s.App_title} >Phonebook</h1>
+    <h1>Phonebook</h1>
     <ContactForm />
 
-    <h2 className={s.App_title}>Contacts</h2> 
+    <h2>Contacts</h2> 
     <Filter />
         <ContactList />
         
